@@ -13,12 +13,26 @@ namespace DAL
     {
         public bool Alterar(Banda banda)
         {
-            return false;
+            MySqlCommand comando = new MySqlCommand("UPDATE Banda SET Descricao = @Descricao, Cidade = @Cidade, " +
+                                                    "Uf = @Uf, Vocalista = @Vocalista", Conexao.ConectarDB());
+
+            comando.Parameters.AddWithValue("@Descricao", banda.Descricao);
+            comando.Parameters.AddWithValue("@Cidade", banda.Cidade);
+            comando.Parameters.AddWithValue("@Uf", banda.UF);
+            comando.Parameters.AddWithValue("@Vocalista", banda.Vocalista);
+
+            MySqlDataReader dr = comando.ExecuteReader();
+            return dr.RecordsAffected > 0;
         }
 
         public bool Excluir(Banda banda)
         {
-            return false;
+            MySqlCommand comando = new MySqlCommand("DELETE FROM Banda WHERE CodBanda = @CodBanda", Conexao.ConectarDB());
+
+            comando.Parameters.AddWithValue("@CodBanda", banda.CodBanda);
+
+            MySqlDataReader dr = comando.ExecuteReader();
+            return dr.RecordsAffected > 0;
         }
 
         public bool Inserir(Banda banda)
@@ -32,9 +46,7 @@ namespace DAL
             comando.Parameters.AddWithValue("@Vocalista", banda.Vocalista);
 
             MySqlDataReader dr = comando.ExecuteReader();
-
-
-            return false;
+            return dr.RecordsAffected > 0;
         }
 
         public List<Banda> Listar()
