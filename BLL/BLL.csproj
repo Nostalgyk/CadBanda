@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BandaBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CadBandas\CadBandas.csproj">
-      <Project>{2c7e706b-1023-4c87-80d9-0af600f513a5}</Project>
-      <Name>CadBandas</Name>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{2d861bd1-4e34-40c2-bacd-ec16ca7b86f0}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\POJO\POJO.csproj">
       <Project>{788fc56b-47b9-4d3d-8818-d2815dfdbec7}</Project>

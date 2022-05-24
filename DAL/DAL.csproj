@@ -68,10 +68,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{ce452cc1-4b92-4426-b8c6-8f7fe04ec71b}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\POJO\POJO.csproj">
       <Project>{788fc56b-47b9-4d3d-8818-d2815dfdbec7}</Project>
       <Name>POJO</Name>

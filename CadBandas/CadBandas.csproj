@@ -67,16 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ListaBandas.aspx" />
+    <Content Include="Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListaBandas.aspx.cs">
-      <DependentUpon>ListaBandas.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListaBandas.aspx.designer.cs">
-      <DependentUpon>ListaBandas.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,6 +90,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{ce452cc1-4b92-4426-b8c6-8f7fe04ec71b}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\POJO\POJO.csproj">
       <Project>{788fc56b-47b9-4d3d-8818-d2815dfdbec7}</Project>
       <Name>POJO</Name>

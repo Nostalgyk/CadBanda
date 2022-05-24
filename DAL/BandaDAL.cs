@@ -51,7 +51,25 @@ namespace DAL
 
         public List<Banda> Listar()
         {
-            return null;
+            MySqlCommand command = new MySqlCommand("Select CodBanda, Descricao, Cidade, Uf, Vocalista from Banda", Conexao.ConectarDB());
+
+            MySqlDataReader dr = command.ExecuteReader();
+
+            List<Banda> lb = new List<Banda>();
+
+            while (dr.Read())
+            {
+                Banda b = new Banda();
+                b.CodBanda = Convert.ToInt32(dr["CodBanda"].ToString());
+                b.Descricao = dr["Descricao"].ToString();
+                b.Cidade = dr["Cidade"].ToString();
+                b.UF = dr["Uf"].ToString();
+                b.Vocalista = dr["Vocalista"].ToString();
+
+                lb.Add(b);
+            }
+
+            return lb;
         }
     }
 }
