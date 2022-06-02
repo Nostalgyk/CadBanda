@@ -56,7 +56,7 @@ namespace DAL
             MySqlDataReader dr = command.ExecuteReader();
 
             List<Banda> lb = new List<Banda>();
-
+                                                         
             while (dr.Read())
             {
                 Banda b = new Banda();
